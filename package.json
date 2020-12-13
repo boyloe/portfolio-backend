@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "npx tsc index.ts && nodemon ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,9 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.9",
+    "@types/node-fetch": "^2.5.7",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.6"
   }
 }
