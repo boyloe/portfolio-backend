@@ -1,10 +1,9 @@
-import express = require('express')
+import express from 'express'
 const fetch = require('node-fetch')
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
-
 
 const app:express.Application = express()
 const port = 4000
@@ -20,7 +19,7 @@ fetch("https://dev.to/api/articles/me", {
 console.log(blogApiKey)
 
 app.get('/blogposts', (request, response) => { 
-
+    response.json()
 })
 
 app.listen(port)
