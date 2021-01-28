@@ -16,9 +16,8 @@ fetch("https://dev.to/api/articles/me", {
 })
 .then((response:any) => response.json())
 .then(console.log)
-console.log(blogApiKey)
 
-app.get('/blogposts', (request, response) => { 
+app.get('/blogposts', (_, response) => { 
     response.json()
 })
 
